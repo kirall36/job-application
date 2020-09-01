@@ -1,0 +1,43 @@
+{
+  "name": "JobResult",
+  "fields": [
+    {
+      "fieldName": "jobId",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "jrtStatusCode",
+      "fieldType": "JobResultStatus",
+      "fieldValues": "SCHEDULED,CANCELLED,ERROR,SENT_FOR_EXECUTION,EXECUTING,DONE,DELIVERED"
+    },
+    {
+      "fieldName": "jrtStartDttm",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "jrtEndDttm",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "jrtResult",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "jrtLog",
+      "fieldType": "Long"
+    }
+  ],
+  "relationships": [],
+  "changelogDate": "20200901105526",
+  "entityTableName": "job_result",
+  "dto": "mapstruct",
+  "pagination": "no",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "jobApplication",
+  "applications": "*",
+  "microserviceName": "jobApplication"
+}

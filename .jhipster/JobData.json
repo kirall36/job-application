@@ -1,0 +1,63 @@
+{
+  "name": "JobData",
+  "fields": [
+    {
+      "fieldName": "jobCode",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "jobName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "jobUser",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "jobParameterJson",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "jobCreateDttm",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "jobIntervalStartDttm",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "jobIntervalEndDttm",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "jobNextDttm",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "jobScheduleExpression",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "jobLastIsSuccessBool",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "jobStatusCode",
+      "fieldType": "JobStatus",
+      "fieldValues": "SCHEDULED,FINISHED,ACTIVE,CANCELLED"
+    }
+  ],
+  "relationships": [],
+  "changelogDate": "20200901105426",
+  "entityTableName": "job_data",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "jobApplication",
+  "applications": "*",
+  "microserviceName": "jobApplication"
+}
