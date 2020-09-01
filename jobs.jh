@@ -1,0 +1,41 @@
+entity JobData {
+	jobCode String,
+    jobName String,
+    jobUser String,
+    jobParameterJson String,
+    jobCreateDttm Instant,
+    jobIntervalStartDttm Instant,
+    jobIntervalEndDttm Instant,
+    jobNextDttm Instant,
+    jobScheduleExpression String,
+    jobLastIsSuccessBool Boolean,
+    jobStatusCode JobStatus
+}
+
+entity JobResult {
+	jobId String,
+    jrtStatusCode JobResultStatus,
+  	jrtStartDttm Instant,
+    jrtEndDttm Instant,
+    jrtResult Long,
+    jrtLog Long
+}
+
+enum JobStatus {
+    SCHEDULED, FINISHED, ACTIVE, CANCELLED
+}
+
+enum JobResultStatus {
+	SCHEDULED, CANCELLED, ERROR, SENT_FOR_EXECUTION, EXECUTING, DONE, DELIVERED 
+}
+
+paginate JobData with pagination
+
+// Use Data Transfert Objects (DTO)
+dto * with mapstruct
+
+// Set service options to all except few
+service all with serviceImpl
+
+// Set an angular suffix
+// angularSuffix * with mySuffix
